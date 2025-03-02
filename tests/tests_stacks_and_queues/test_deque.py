@@ -2,7 +2,7 @@ import sys
 import unittest
 import io
 
-from data_structures.deque import Deque
+from data_structures.stacks_and_queues.deque import Deque
 
 
 class TestDeque(unittest.TestCase):
@@ -76,11 +76,11 @@ class TestDeque(unittest.TestCase):
         self.assertEqual(self.deque.peek_back(), 15)                    # Result obtained: OK
 
     def test_is_empty(self):
-        self.assertEqual(self.deque.is_empty(), True)                   # Result obtained: OK
+        self.assertTrue(self.deque.is_empty())                                  # Result obtained: OK
 
     def test_is_not_empty(self):
         self.deque.insert_back(5)
-        self.assertEqual(self.deque.is_empty(), False)                  # Result obtained: OK
+        self.assertFalse(self.deque.is_empty())                                 # Result obtained: OK
 
     def test_get_size(self):
         self.deque.insert_front(5)
@@ -92,7 +92,7 @@ class TestDeque(unittest.TestCase):
         self.deque.insert_front(10)
         self.deque.insert_back(15)
         self.deque.clear()
-        self.assertEqual(self.deque.is_empty(), True)                   # Result obtained: OK
+        self.assertTrue(self.deque.is_empty())                                  # Result obtained: OK
 
     def test_display(self):
         self.deque.insert_front(5)
@@ -108,7 +108,7 @@ class TestDeque(unittest.TestCase):
             self.deque.display()
         finally:
             sys.stdout = original_stdout
-        self.assertEqual(capture_output.getvalue().strip(), expected_output)   # Result obtained: OK
+        self.assertEqual(capture_output.getvalue().strip(), expected_output)    # Result obtained: OK
 
 if __name__ == '__main__':
     unittest.main()

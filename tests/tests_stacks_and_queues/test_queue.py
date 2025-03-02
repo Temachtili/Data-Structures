@@ -1,7 +1,7 @@
 import sys
 import unittest
 import io
-from data_structures.queue import Queue
+from data_structures.stacks_and_queues.queue import Queue
 
 class TestQueue(unittest.TestCase):
     def setUp(self):

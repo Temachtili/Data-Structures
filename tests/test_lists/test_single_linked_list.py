@@ -1,7 +1,7 @@
 import unittest
 import io
 import sys
-from data_structures.single_linked_list import SingleLinkedList
+from data_structures.lists.single_linked_list import SingleLinkedList
 
 class TestSingleLinkedList(unittest.TestCase):
 

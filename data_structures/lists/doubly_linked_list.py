@@ -1,18 +1,15 @@
 #%% md
-# # Deque
+# # Doubly Linked List
 # *Created by Angel Gael Aviles Gama on python at 03/01/2025*
 #%%
-### First we need to create our structure Node, which will be the main element in our Deque
-from nbformat.v1 import new_notebook
-
-
+### First we need to create our structure Node, which will be the main element in our Doubly Linked List
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
         self.prev = None
 #%%
-### Now we create our class for the Deque, where all the functions will be contained (insert_front, remove_front, etc.)
+### Now we create our class for the Doubly Linked List, where all the functions will be contained (insert_front, remove_front, etc.)
 class DoublyLinkedList:
     def __init__(self):
         self.head = None

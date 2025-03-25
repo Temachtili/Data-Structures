@@ -2,7 +2,7 @@
 # # Adjacency Matrix
 # *Created by Angel Gael Aviles Gama on python at 03/04/2025*
 #%%
-class Graph:
+class DirectedGraph:
     def __init__(self):
         self.size = 0
         self.matrix = []
@@ -19,14 +19,13 @@ class Graph:
             row.append(0)
         self.matrix.append([0] * self.size)
 
-    def add_edge(self, u, v):
+    def add_edge(self, u, v, weight=1):
         if u not in self.node_map or v not in self.node_map:
             raise IndexError("One of the nodes does not exist in graph")
 
         x = self.node_map[u]
         y = self.node_map[v]
-        self.matrix[x][y] = 1
-        self.matrix[y][x] = 1
+        self.matrix[x][y] = weight
 
     # Return True if u is adjacent to v
     def adjacent(self, u, v):
@@ -72,4 +71,11 @@ class Graph:
         y = self.node_map[v]
 
         self.matrix[x][y] = 0
-        self.matrix[y][x] = 0
+
+    def display(self):
+        labels = list(self.node_map.keys())
+        print("   ", "  ".join(labels))
+        for label in labels:
+            i = self.node_map[label]
+            row = [str(self.matrix[i][self.node_map[lab]]) for lab in labels]
+            print(label, " ".join(row))

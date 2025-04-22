@@ -8,10 +8,28 @@ It's designed as a personal reference and educational toolkit, with clean modula
 ---
 
 ## 📦 Project Structure
+```
+data_structures/
+├── graphs/
+│   ├── directed_graph.py
+│   └── flow_network.py
+├── lists/
+│   ├── single_linked_list.py
+│   └── doubly_linked_list.py
+├── stacks_and_queues/
+│   ├── stack.py
+│   ├── queue.py
+│   └── deque.py
+└── trees/
+    ├── binary_tree.py
+    └── binary_search_tree.py
 
-data_structures/ │ ├── graphs/ │ ├── directed_graph.py │ └── flow_network.py │ ├── lists/ │ ├── single_linked_list.py │ └── doubly_linked_list.py │ ├── stacks_and_queues/ │ ├── stack.py │ ├── queue.py │ └── deque.py │ └── trees/ ├── binary_tree.py └── binary_search_tree.py
-tests/ ├── test_lists/ ├── tests_stacks_and_queues/ ├── tests_trees/ └── tests_graphs/
-
+tests/
+├── test_lists/
+├── tests_stacks_and_queues/
+├── tests_trees/
+└── tests_graphs/
+```
 
 > Each folder has its corresponding test suite under the `/tests` directory, organized by category.
 
